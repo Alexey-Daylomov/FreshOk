@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'OpenSans-Bold', sans-serif;
+  src: local('OpenSans-Bold'),
+    url('OpenSans-Bold.woff2') format('woff2'),
+    url('OpenSans-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular', sans-serif;
+  src: local('OpenSans-Regular'),
+    url('OpenSans-Regular.woff2') format('woff2'),
+    url('OpenSans-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  src: local('OpenSans-SemiBold'),
+    url('OpenSans-SemiBold.woff2') format('woff2'),
+    url('OpenSans-SemiBold.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Black', sans-serif;
+  src: local('Ruda-Black'),
+    url('Ruda-Black.woff2') format('woff2'),
+    url('Ruda-Black.woff') format('woff');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-SemiBold', sans-serif;
+  src: local('Ruda-SemiBold'),
+    url('Ruda-SemiBold.woff2') format('woff2'),
+    url('Ruda-SemiBold.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
