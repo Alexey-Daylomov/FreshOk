@@ -4,4 +4,6 @@ $(function(){
     nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
   });
 
+  var mixer = mixitup('.product__content');
+
 });
