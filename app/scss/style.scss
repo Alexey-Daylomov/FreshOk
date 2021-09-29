@@ -926,4 +926,56 @@
   }
 }
 
+.partners {
+  padding: 73px 0;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    width: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    opacity: 0.5;
+    transition: opacity .3s;
+
+    &:not(:last-child) {
+      margin-right: 140px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--sprite {
+      height: 34px;
+    }
+
+    &--pepper {
+      height: 58px;
+    }
+
+    &--cola {
+      height: 27px;
+    }
+
+    &--pepsi {
+      height: 31px;
+    }
+
+    &--redbull {
+      height: 49px;
+    }
+
+    &--fanta {
+      height: 59px;
+    }
+  }
+}
+
 @import 'media';
