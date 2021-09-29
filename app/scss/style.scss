@@ -27,6 +27,18 @@
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -71,22 +83,22 @@
       top: 50%;
       transform: translateY(-50%);
     }
-  }
 
-  &__list-link--delivery {
-    padding-left: 44px;
+    &--delivery {
+      padding-left: 44px;
 
-    &::before {
-      background-image: url('../images/icons/deliver.svg');
-      width: 32px;
+      &::before {
+        background-image: url('../images/icons/deliver.svg');
+        width: 32px;
+        height: 22px;
+      }
+    }
+
+    &--phone::before {
+      background-image: url('../images/icons/tel.svg');
+      width: 22px;
       height: 22px;
     }
-  }
-
-  &__list-link--phone::before {
-    background-image: url('../images/icons/tel.svg');
-    width: 22px;
-    height: 22px;
   }
 
   &__list-item:not(:last-child) {
@@ -154,10 +166,10 @@
     &:not(:last-child) {
       margin-bottom: 7px;
     }
-  }
 
-  &__span--short {
-    width: 20px;
+    &--short {
+      width: 20px;
+    }
   }
 
   &__link {
@@ -210,6 +222,14 @@
       &:hover {
         background-color: rgba(49, 53, 43, 0.85);
       }
+
+      &:focus {
+        box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+      }
+
+      &:active {
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
     }
 
     &::after {
@@ -255,27 +275,27 @@
       top: 50%;
       left: 50%;
     }
-  }
 
-  &__network--lk::before {
-    background-image: url('../images/icons/lk.svg');
-    width: 25px;
-    height: 32px;
-    transform: translate(50%, 25%);
-  }
+    &--lk::before {
+      background-image: url('../images/icons/lk.svg');
+      width: 25px;
+      height: 32px;
+      transform: translate(50%, 25%);
+    }
 
-  &__network--favorit::before {
-    background-image: url('../images/icons/favorite.svg');
-    width: 32px;
-    height: 29px;
-    transform: translate(30%, 40%);
-  }
+    &--favorit::before {
+      background-image: url('../images/icons/favorite.svg');
+      width: 32px;
+      height: 29px;
+      transform: translate(30%, 40%);
+    }
 
-  &__network--cart::before {
-    background-image: url('../images/icons/cart.svg');
-    width: 33px;
-    height: 32px;
-    transform: translate(25%, 30%);
+    &--cart::before {
+      background-image: url('../images/icons/cart.svg');
+      width: 33px;
+      height: 32px;
+      transform: translate(25%, 30%);
+    }
   }
 
   &__network-num {
@@ -346,8 +366,9 @@
     position: absolute;
     top: 61%;
     transform: translateY(-50%);
-    max-width: inherit;
-    width: 67%;
+    max-width: 1290px;
+    // писал max-width:inherit, но контент выезжал за пределы .container. Почему так?
+    width: 100%;
     padding: 24px;
   }
 
@@ -374,7 +395,8 @@
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 40%;
+  top: 60%;
+  transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
   border: none;
@@ -453,18 +475,18 @@
       left: 0;
       top: 0;
     }
-  }
 
-  &__item--delivery::before {
-    background-image: url('../images/icons/scooter.svg');
-  }
+    &--delivery::before {
+      background-image: url('../images/icons/scooter.svg');
+    }
 
-  &__item--refund::before {
-    background-image: url('../images/icons/refund.svg');
-  }
+    &--refund::before {
+      background-image: url('../images/icons/refund.svg');
+    }
 
-  &__item--support::before {
-    background-image: url('../images/icons/support.svg');
+    &--support::before {
+      background-image: url('../images/icons/support.svg');
+    }
   }
 
   &__title {
@@ -513,7 +535,7 @@
     grid-template-columns: repeat(4, 300px);
     row-gap: 30px;
     column-gap: 30px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 
   &__more-btn {
@@ -556,20 +578,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
 
-  &__offer-item--first {
-    max-width: 630px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-    color: $white;
-  }
 
-  &__offer-item--first .product__offer-title {
-    max-width: 355px;
-  }
+    &--first {
+      max-width: 630px;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+      color: $white;
+    }
 
-  &__offer-item--first .product__offer-link {
-    border-bottom: 2px solid $white;
+    &--first .product__offer-title {
+      max-width: 355px;
+    }
+
+    &--first .product__offer-link {
+      border-bottom: 2px solid $white;
+    }
   }
 
   &__offer-subtitle {
@@ -585,7 +608,7 @@
     display: block;
     font-size: 30px;
     @extend %ruda-600;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
     max-width: 159px;
   }
 
@@ -613,13 +636,18 @@
   background-color: $white;
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
-  padding: 12px;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: $green-900;
+  }
 
   &__info-panel {
     display: flex;
     justify-content: space-between;
-    height: 38px;
+    height: 47px;
     margin-bottom: 7px;
+    padding: 14px 12px;
   }
 
   &__info {
@@ -676,13 +704,16 @@
   }
 
   &__img {
-    margin-bottom: 15px;
-    max-width: 262px;
+    margin-bottom: 19px;
     height: 215px;
   }
 
+  &__descr {
+    padding: 0 18px 12px;
+  }
+
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     height: 66px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -756,6 +787,7 @@
 .footer {
   background-color: $dark-800;
   padding-top: 30px;
+  margin-top: auto;
 
   &__top {
     padding-bottom: 30px;
@@ -763,7 +795,7 @@
   }
 
   &__top .logo-img {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   &__top-inner {
@@ -774,6 +806,7 @@
   &__form {
     display: flex;
     flex-direction: column;
+    margin-right: 80px;
   }
 
   &__form-label {
@@ -791,7 +824,7 @@
     max-width: 181px;
     border-radius: 6px 0 0 6px;
     border: none;
-    padding: 12px;
+    padding: 10px;
   }
 
   &__form-btn {
@@ -799,14 +832,15 @@
     font-size: 12px;
     text-transform: uppercase;
     @extend %opensans-700;
+    padding: 12px 17px;
   }
 
   &__menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    column-gap: 75px;
-    row-gap: 18px;
+    column-gap: 70px;
+    row-gap: 5px;
     grid-auto-flow: column;
     color: $white;
   }
@@ -873,8 +907,8 @@
 .social {
   display: flex;
 
-  &__item:not(:last-child) {
-    margin-right: 12px;
+  &__item {
+    margin: 0 6px;
   }
 
   &__item-link {
