@@ -1,9 +1,9 @@
 $(function(){
-  $('.hero__slider').slick({
+  $('.discounts-slider__inner').slick({
     prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
   });
 
-  var mixer = mixitup('.product__content');
+  var mixer = mixitup('.product-top__content');
 
 });

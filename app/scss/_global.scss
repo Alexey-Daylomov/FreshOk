@@ -1,5 +1,6 @@
 body {
-  @extend %opensans-400;
+  font-family: $font-opensans;
+  font-weight: 400;
   color: $dark-500;
   font-size: 14px;
   line-height: 1.4;
@@ -14,4 +15,98 @@ body {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.btn {
+  background-color: $green-900;
+  border-radius: 6px;
+  color: $white;
+  padding: 12px 24px;
+  font-size: 18px;
+  line-height: 1.3;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #4D810C;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px $green-200;
+  }
+
+  &:active {
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+    background-color: $green-900;
+  }
+
+  &--cart {
+    border-radius: 3px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/cart.svg');
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  &--transparent {
+    display: block;
+    background-color: transparent;
+    border: 1px solid $green-900;
+    color: $green-900;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+    }
+
+    &:active {
+      box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+      color: $green-900;
+      background-color: transparent;
+    }
+  }
+
+  &--stock{
+    display: block;
+    margin: 0 auto;
+  }
+
+  &--subscribe{
+    border-radius: 0 6px 6px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 12px 17px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
