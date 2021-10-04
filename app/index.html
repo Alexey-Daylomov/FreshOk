@@ -45,7 +45,7 @@
             <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип Фрешок">
           </a>
           <div class="menu__catalog menu__catalog--active">
-            <p class="menu__text" href="">Каталог продуктов</p>
+            <p class="menu__text">Каталог продуктов</p>
             <ul class="menu__list">
               <li class="menu__item">
                 <a class="menu__link" href="#">Овощи и фрукты</a>
@@ -101,6 +101,9 @@
           <li class="control__item">
             <button class="control__network control__network--favorit" type="button">
               <span class="control__network-num control__network-num--opacity1">12</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#favorite-gray"></use>
+              </svg>
               <span class="sr-only">Избранное</span>
             </button>
           </li>
@@ -182,7 +185,7 @@
         </ul>
       </div>
     </div>
-    <section class="product-top">
+    <section class="product-top" data-ref="product-top">
       <div class="container">
         <h2 class="title">Топовые товары</h2>
         <ul class="filters">
@@ -216,6 +219,9 @@
           <li class="mix fruits">
             <article class="product-top__item product-top__item--new product-top__item--sale50">
               <button class="product-top__favorite" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
                 <span class="sr-only">В избранное</span>
               </button>
               <img class="product-top__img" src="images/product/1.jpg" width="300" height="225" alt="Ананас">
@@ -233,6 +239,9 @@
           <li class="mix fruits">
             <article class="product-top__item">
               <button class="product-top__favorite" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
                 <span class="sr-only">В избранное</span>
               </button>
               <img class="product-top__img" src="images/product/2.jpg" width="300" height="225" alt="Лимон">
@@ -250,6 +259,9 @@
           <li class="mix fruits">
             <article class="product-top__item product-top__item--hit">
               <button class="product-top__favorite" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
                 <span class="sr-only">В избранное</span>
               </button>
               <img class="product-top__img" src="images/product/3.jpg" width="300" height="225" alt="Питахайя">
@@ -267,6 +279,9 @@
           <li class="mix vegetables">
             <article class="product-top__item product-top__item--new">
               <button class="product-top__favorite" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
                 <span class="sr-only">В избранное</span>
               </button>
               <img class="product-top__img" src="images/product/4.jpg" width="300" height="225" alt="Перец">
@@ -284,6 +299,9 @@
           <li class="mix vegetables">
             <article class="product-top__item product-top__item--hit">
               <button class="product-top__favorite" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
                 <span class="sr-only">В избранное</span>
               </button>
               <img class="product-top__img" src="images/product/5.jpg" width="300" height="225" alt="Морковь">
@@ -301,6 +319,9 @@
           <li class="mix beverages">
             <article class="product-top__item product-top__item--sale30">
               <button class="product-top__favorite" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
                 <span class="sr-only">В избранное</span>
               </button>
               <img class="product-top__img" src="images/product/6.jpg" width="300" height="225" alt="Напиток">
@@ -318,6 +339,9 @@
           <li class="mix grocery">
             <article class="product-top__item product-top__item--new">
               <button class="product-top__favorite" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
                 <span class="sr-only">В избранное</span>
               </button>
               <img class="product-top__img" src="images/product/7.jpg" width="300" height="225" alt="Кофе">
@@ -336,6 +360,9 @@
             <article class="product-top__item">
               <button class="product-top__favorite" type="button">
                 <span class="sr-only">В избранное</span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-gray"></use>
+                </svg>
               </button>
               <img class="product-top__img" src="images/product/8.jpg" width="300" height="225" alt="Кетчуп">
               <div class="product-top__descr">
@@ -351,31 +378,35 @@
           </li>
         </ul>
         <button class="btn btn--transparent" type="button">Показать ещё</button>
+      </div>
     </section>
     <section class="offer">
       <div class="container">
+        <h2 class="sr-only">Предложения</h2>
         <ul class="offer__list">
           <li class="offer__item offer__item--first" style="background-image: url(images/offer/1.jpg);">
+            <div class="offer__inner">
             <span class="offer__subtitle">свежайшие фрукты</span>
-            <h4 class="offer__title">Начни фруктовое лето всего от 99 ₽</h4>
+            <h3 class="offer__title">Начни фруктовое лето всего от 99 ₽</h3>
             <a class="offer__link" href="#">Перейти к покупкам</a>
+            </div>
           </li>
           <li class="offer__item" style="background-image: url(images/offer/2.jpg);">
             <span class="offer__subtitle">сезонная распродажа</span>
-            <h4 class="offer__title">Овощепад до -50%</h4>
+            <h3 class="offer__title">Овощепад до -50%</h3>
             <a class="offer__link" href="#">Перейти к покупкам</a>
           </li>
           <li class="offer__item" style="background-image: url(images/offer/3.jpg);">
             <span class="offer__subtitle">ням-ням</span>
-            <h4 class="offer__title">Свежий хлебчик</h4>
+            <h3 class="offer__title">Свежий хлебчик</h3>
             <a class="offer__link" href="#">Перейти к покупкам</a>
           </li>
         </ul>
       </div>
     </section>
-    <section class="stock">
+    <section class="stock" data-ref="stock">
       <div class="container">
-        <h2 class="title">Акции</h2>
+        <h2 class="title title--stock">Акции</h2>
         <ul class="filters">
           <li class="filters__item">
             <button class="filters__btn" type="button" data-filter="all">
@@ -393,31 +424,228 @@
             </button>
           </li>
         </ul>
-        <ul class="stock__offer">
-          <li class="stock__item mix new"></li>
-          <li class="stock__item mix new"></li>
-          <li class="stock__item mix new"></li>
-          <li class="stock__item mix new"></li>
-          <li class="stock__item mix new"></li>
-          <li class="stock__item mix hit"></li>
-          <li class="stock__item mix hit"></li>
-          <li class="stock__item mix hit"></li>
+        <ul class="product-top__content">
+          <li class="mix new">
+            <article class="product-top__item product-top__item--new product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/1.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Ананас, 1 кг</h3>
+                <p class="product-top__presence product-top__presence--in">В наличии</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">999<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">1999₽</span>
+                  <p class="product-top__rate">
+                    4.5
+                    <span class="product-top__star" data-rateyo-rating="4.5">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="mix new">
+            <article class="product-top__item product-top__item--new product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/7.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+                <p class="product-top__presence product-top__presence--ends">Заканчивается</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">777<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">877₽</span>
+                  <p class="product-top__rate">
+                    4.9
+                    <span class="product-top__star" data-rateyo-rating="4.9">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="mix new">
+            <article class="product-top__item product-top__item--new product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/13.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Клубника, 1 кг</h3>
+                <p class="product-top__presence product-top__presence--not">Нет в наличии</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">440<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">600₽</span>
+                  <p class="product-top__rate">
+                    5.0
+                    <span class="product-top__star" data-rateyo-rating="5.0">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="mix new">
+            <article class="product-top__item product-top__item--new product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/9.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Манго, 1 шт</h3>
+                <p class="product-top__presence product-top__presence--in">В наличии</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">660<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">960₽</span>
+                  <p class="product-top__rate">
+                    5.0
+                    <span class="product-top__star" data-rateyo-rating="5.0">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="mix new">
+            <article class="product-top__item product-top__item--new product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/10.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Лосось, 1 кг</h3>
+                <p class="product-top__presence product-top__presence--in">В наличии</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">999<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">1999₽</span>
+                  <p class="product-top__rate">
+                    4.5
+                    <span class="product-top__star" data-rateyo-rating="4.5">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="mix hit">
+            <article class="product-top__item product-top__item--hit product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/11.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Сок Granini овощной 100%, 0.5л</h3>
+                <p class="product-top__presence product-top__presence--ends">Заканчивается</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">180<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">230₽</span>
+                  <p class="product-top__rate">
+                    4.9
+                    <span class="product-top__star" data-rateyo-rating="4.9">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="mix hit">
+            <article class="product-top__item product-top__item--hit product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/12.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Фруктовая корзина, 1 шт</h3>
+                <p class="product-top__presence product-top__presence--in">В наличии</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">3990<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">5990₽</span>
+                  <p class="product-top__rate">
+                    4.8
+                    <span class="product-top__star" data-rateyo-rating="4.8">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="mix hit">
+            <article class="product-top__item product-top__item--hit product-top__item--stock">
+              <img class="product-top__img product-top__img--stock" src="images/product/14.jpg" width="100" height="100" alt="">
+              <div class="product-top__info">
+                <h3 class="product-top__title">Свинина мякоть, 1 кг</h3>
+                <p class="product-top__presence product-top__presence--in">В наличии</p>
+                <div class="product-top__item-inner">
+                  <p class="product-top__price">499<span class="product-top__price--span">₽</span></p>
+                  <span class="product-top__old">599₽</span>
+                  <p class="product-top__rate">
+                    4.6
+                    <span class="product-top__star" data-rateyo-rating="4.6">
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
         </ul>
-        <button class="btn btn--stock">Показать ещё</button>
+        <button class="btn btn--stock" type="button">Показать ещё</button>
       </div>
     </section>
     <div class="partners">
       <div class="container">
         <ul class="partners__list">
-          <li class="partners__item partners__item--sprite" style="background-image: url(images/partners/sprite.svg);"></li>
-          <li class="partners__item partners__item--pepper" style="background-image: url(images/partners/dr-pepper.svg);"></li>
-          <li class="partners__item partners__item--cola" style="background-image: url(images/partners/coca-cola.svg);"></li>
-          <li class="partners__item partners__item--pepsi" style="background-image: url(images/partners/pepsi.svg);"></li>
-          <li class="partners__item partners__item--redbull" style="background-image: url(images/partners/redbull.svg);"></li>
-          <li class="partners__item partners__item--fanta" style="background-image: url(images/partners/fanta.svg);"></li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/sprite.svg" height="34" width="80" alt="sprite">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/dr-pepper.svg" height="58" width="80" alt="dr pepper">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/coca-cola.svg" height="26" width="80" alt="coca cola">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/pepsi.svg" height="31" width="80" alt="pepsi">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/redbull.svg" height="49" width="80" alt="redbull">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/fanta.svg" height="59" width="80" alt="fanta">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/sprite.svg" height="34" width="80" alt="sprite">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/dr-pepper.svg" height="58" width="80" alt="dr pepper">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/coca-cola.svg" height="26" width="80" alt="coca cola">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/pepsi.svg" height="31" width="80" alt="pepsi">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/redbull.svg" height="49" width="80" alt="redbull">
+          </li>
+          <li class="partners__item">
+            <img class="partners__img" src="images/partners/fanta.svg" height="59" width="80" alt="fanta">
+          </li>
         </ul>
       </div>
     </div>
+    <section class="news">
+      <div class="container">
+        <div class="news__inner">
+          <h2 class="title title--news">Наши новости</h2>
+          <a class="news__all-news" href="#">Все новости</a>
+        </div>
+        <ul class="news__list">
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <div class="news__data">июль<span class="news__data-span">15</span></div>
+              <img class="news__img" src="images/news/1.jpg" width="410" height="240" alt="клубника">
+              <h3 class="news__title">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!</h3>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <div class="news__data">май<span class="news__data-span">07</span></div>
+              <img class="news__img" src="images/news/2.jpg" width="410" height="240" alt="манго">
+              <h3 class="news__title">Шикарнейший выбор манго в нашем онлайн-маркете</h3>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <div class="news__data">февраль<span class="news__data-span">20</span></div>
+              <img class="news__img" src="images/news/3.jpg" width="410" height="240" alt="папайя">
+              <h3 class="news__title">Всё, что вы хотели знать о папайя</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
   </main>
   <footer class="footer">

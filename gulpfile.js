@@ -11,6 +11,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const image = require('gulp-image');
+const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 
@@ -20,6 +21,18 @@ function browsersync() {
       baseDir: 'app/'
     },
   });
+}
+
+const svgSprites = () => {
+  return src('app/images/svg/*.svg')
+  .pipe(svgSprite({
+    mode: {
+      stack: {
+        sprite: "../sprite.svg"
+      }
+    },
+  }))
+  .pipe(dest('app/images'));
 }
 
 function styles() {
@@ -41,6 +54,7 @@ function scripts() {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/slick-carousel/slick/slick.js',
       'node_modules/mixitup/dist/mixitup.js',
+      'node_modules/rateyo/src/jquery.rateyo.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -80,6 +94,7 @@ function build() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
+  watch(['app/images/svg/*.svg'], svgSprites);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch('app/**/*.html').on('change', browserSync.reload);
 }
@@ -89,6 +104,7 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
+exports.svgSprites = svgSprites;
 
-exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.build = series(cleanDist, images, svgSprites, build);
+exports.default = parallel(styles, scripts, svgSprites, browsersync, watching);
