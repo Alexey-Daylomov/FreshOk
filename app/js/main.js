@@ -11,14 +11,6 @@ $(function () {
     autoplay: true,
   });
 
-  $('.product-top__star').rateYo({
-    starWidth: "16px",
-    numStars: 1,
-    ratedFill: "#FFB800",
-    normalFill: "#FFB800",
-    readOnly: true,
-  });
-
   var containerEl1 = document.querySelector('[data-ref="product-top"]');
   var containerEl2 = document.querySelector('[data-ref="stock"]');
  

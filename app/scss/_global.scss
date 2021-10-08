@@ -15,6 +15,7 @@ body {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+  width: 100%;
 }
 
 .btn {
@@ -63,12 +64,10 @@ body {
     }
   }
 
-  &--transparent {
-    display: block;
+  &--secondary {
     background-color: transparent;
     border: 1px solid $green-900;
     color: $green-900;
-    margin: 0 auto;
 
     &:hover {
       background-color: $green-100;
@@ -85,18 +84,32 @@ body {
     }
   }
 
-  &--stock{
-    display: block;
-    margin: 0 auto;
-  }
-
-  &--subscribe{
-    border-radius: 0 6px 6px 0;
+  &--thirdly {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
     padding: 12px 17px;
+    float: right;
   }
+}
+
+.title {
+  font-family: $font-ruda;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: $dark-900;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
 .sr-only {
