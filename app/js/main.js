@@ -18,44 +18,39 @@ $(function () {
     arrows: false,
     autoplay: true,
     responsive: [{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
       }
-    ]
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }
+  ]
   });
 
-  $('.product-top__star').rateYo({
-    starWidth: "16px",
-    numStars: 1,
-    ratedFill: "#FFB800",
-    normalFill: "#FFB800",
-    readOnly: true,
-  });
+  $('.product-top__input').styler();
 
-  const button = document.querySelector('.control__network--search');
+  const button = document.querySelector('.header__btn--search');
 
   button.addEventListener('click', () => {
     $('.form').toggleClass('form-open');
   });
 
-  $('.menu__btn, .menu__mobile').on('click', function () {
-    $('.menu__mobile').toggleClass('menu__mobile--active');
-    $('.menu__btn').toggleClass('menu__btn--active');
+  $('.menu, .overlay, .menu-mobile').on('click', function () {
+    $('.menu-mobile').toggleClass('menu-mobile--active');
+    $('.menu').toggleClass('menu--active');
+    $('.overlay').toggleClass('overlay--active');
   });
 
   var containerEl1 = document.querySelector('[data-ref="product-top"]');
   var containerEl2 = document.querySelector('[data-ref="stock"]');
-
+ 
   var config = {
     controls: {
       scope: 'local'
