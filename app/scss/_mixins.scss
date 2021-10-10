@@ -22,6 +22,12 @@
   }
 }
 
+@mixin small-mobile {
+  @media (max-width: (370px)) {
+    @content;
+  }
+}
+
 @mixin line-clamp(
   $font-size,
   $line-height,

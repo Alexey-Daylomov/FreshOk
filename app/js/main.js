@@ -1,7 +1,7 @@
 $(function () {
   $('.discounts-slider__inner').slick({
-    prevArrow: '<button type="button" class="slick-btn slick-prev"><svg><use xlink:href="images/sprite.svg#arrow-gray-l"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"><svg><use xlink:href="images/sprite.svg#arrow-gray-r"></use></svg></button>',
+    prevArrow: '<button type="button" class="slick-btn slick-btn--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-btn--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     responsive: [{
       breakpoint: 1550,
       settings: {
@@ -37,15 +37,29 @@ $(function () {
   $('.product-top__input').styler();
 
   const button = document.querySelector('.header__btn--search');
+  const open = document.querySelector('.menu');
+  const close = document.querySelector('.menu-mobile__close');
 
   button.addEventListener('click', () => {
-    $('.form').toggleClass('form-open');
+    $('.form').toggleClass('form--open');
   });
 
-  $('.menu, .overlay, .menu-mobile').on('click', function () {
+  open.addEventListener('click', () => {
     $('.menu-mobile').toggleClass('menu-mobile--active');
-    $('.menu').toggleClass('menu--active');
+  });
+
+  close.addEventListener('click', () => {
+    $('.menu-mobile').removeClass('menu-mobile--active');
+    $('.overlay').removeClass('overlay--active');
+  });
+
+  $('.menu').on('click', function () {
     $('.overlay').toggleClass('overlay--active');
+  });
+
+  $('.catalog-product__text').on('click', function () {
+    $('.catalog-product__text').toggleClass('catalog-product__text--active');
+    $('.catalog-product__list').toggleClass('catalog-product__list--active');
   });
 
   var containerEl1 = document.querySelector('[data-ref="product-top"]');
