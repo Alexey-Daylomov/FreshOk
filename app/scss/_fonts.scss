@@ -18,6 +18,15 @@
 
 @font-face {
   font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+    url('../fonts/OpenSans-Light.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
   src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
     url('../fonts/OpenSans-SemiBold.woff') format('woff');
   font-style: normal;
@@ -40,5 +49,14 @@
     url('../fonts/Ruda-SemiBold.woff') format('woff');
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda';
+  src: url('../fonts/Ruda-Regular.woff2') format('woff2'),
+    url('../fonts/Ruda-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
 }

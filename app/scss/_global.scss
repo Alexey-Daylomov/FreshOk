@@ -11,6 +11,24 @@ body {
   flex-direction: column;
 }
 
+.overlay {
+  position: relative;
+
+  &--active {
+    &::before {
+      content: '';
+      display: block;
+      background-color: rgba(0, 0, 0, 0.15);
+      position: absolute;
+      left: -15px;
+      top: -3px;
+      right: 0;
+      z-index: 1;
+      height: 100%;
+    }
+  }
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -117,46 +135,15 @@ body {
   gap: 30px;
   margin-bottom: 45px;
 
-  @include small-desctop {
+  @include tablet {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
 
-  @include small-tablet {
+  @include mobile {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
     margin-bottom: 24px;
-  }
-
-  &--banners {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 30px;
-    grid-auto-rows: 300px;
-
-    @include tablet {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      row-gap: 15px;
-    }
-  }
-
-  &--stock {
-    margin-bottom: 50px;
-
-    @include small-desctop {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-
-    @include small-tablet {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 15px;
-    }
-
-    @include mobile{
-      margin-bottom: 24px;
-    }
   }
 }
 
