@@ -7,7 +7,7 @@ $(function () {
       settings: {
         arrows: false,
         dots: true,
-        autoplay: true,
+        // autoplay: true,
       }
     }]
   });
@@ -127,8 +127,6 @@ $(function () {
       $('.overlay').removeClass('overlay--active');
     }
   });
-
-
 
   if (document.querySelector('.product-catalog')) {
     const three = document.querySelector('.three');
