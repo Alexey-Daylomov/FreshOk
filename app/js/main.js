@@ -135,7 +135,7 @@ $(function () {
     three.addEventListener('click', () => {
       $('.product-top__content').addClass('grid-three');
       $('.card-product').addClass('card-product--three');
-      $('.three').addClass('three--three');
+      $('.three').addClass('three--active');
       $('.product-top__content').removeClass('grid-two');
       $('.card-product').removeClass('card-product--two');
       $('.two').removeClass('two--active');
@@ -163,7 +163,7 @@ $(function () {
       $('.overlay').removeClass('overlay--active');
     });
   }
-  
+
   if (document.querySelector('.product-top')) {
     var containerEl1 = document.querySelector('[data-ref="product-top"]');
     var containerEl2 = document.querySelector('[data-ref="stock"]');
