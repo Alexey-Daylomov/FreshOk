@@ -241,8 +241,8 @@
                 <button class="menu-mobile__close sidebar__close" type="button">
                   <span class="sr-only">Закрыть меню фильтров</span>
                 </button>
-                <div class="sidebar__item categories-filter">
-                  <button class="sidebar__btn categories-filter__btn" type='button'>Категории</button>
+                <details class="sidebar__item categories-filter">
+                  <summary class="sidebar__btn categories-filter__btn">Категории</summary>
                   <ul class="categories-filter__list">
                     <li class="categories-filter__item">
                       <a class="categories-filter__link" href="#">Овощи и фрукты</a>
@@ -281,9 +281,9 @@
                       <a class="categories-filter__link" href="#">Чай, кофе</a>
                     </li>
                   </ul>
-                </div>
-                <div class="sidebar__item offers">
-                  <button class="sidebar__btn offers__btn" type='button'>Предложения</button>
+                </details>
+                <details class="sidebar__item offers">
+                  <summary class="sidebar__btn offers__btn">Предложения</summary>
                   <form class="form-check offers__form">
                     <div class="form-check__inner">
                       <input class="form-check__item" type="checkbox" value="sale" name="sale" id="sale">
@@ -298,9 +298,9 @@
                       <label for="hit">Хит</label>
                     </div>
                   </form>
-                </div>
-                <div class="sidebar__item brand">
-                  <button class="sidebar__btn brand__btn" type='button'>Бренд</button>
+                </details>
+                <details class="sidebar__item brand">
+                  <summary class="sidebar__btn brand__btn">Бренд</summary>
                   <form class="form-check brand__form">
                     <div class="form-check__inner">
                       <input class="form-check__item" type="checkbox" value="cocacola" name="cocacola" id="cocacola">
@@ -327,9 +327,9 @@
                       <label for="drpepper">Dr Pepper</label>
                     </div>
                   </form>
-                </div>
-                <div class="sidebar__item price">
-                  <button class="sidebar__btn price__btn" type='button'>Цена</button>
+                </details>
+                <details class="sidebar__item price">
+                  <summary class="sidebar__btn price__btn">Цена</summary>
                   <form class="price-form">
                     <label for="from">От</label>
                     <input class="price-form__from" type="text" name="from" id="from">
@@ -339,7 +339,7 @@
                     <span>₽</span>
                     <input class="price-form__range" type="text" data-min="0" data-max="1500" data-from="100" data-to="1000">
                   </form>
-                </div>
+                </details>
               </div>
             </aside>
             <div class="product-catalog__content">
