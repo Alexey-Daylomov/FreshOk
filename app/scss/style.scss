@@ -2078,10 +2078,11 @@
   @include small-tablet {
     position: absolute;
     transform: translateX(-300%);
+    transition: transform 0.3s;
     background-color: $white;
   }
 
-  .sidebar__close{
+  .sidebar__close {
     display: none;
   }
 
@@ -2144,6 +2145,10 @@
     overflow-y: scroll;
     overflow-x: auto;
 
+    .sidebar__close {
+      display: block;
+    }
+
     .sidebar__inner {
       padding-top: 76px;
       width: 300px;
@@ -2155,6 +2160,24 @@
       top: 25px;
     }
   }
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0;
+  border-radius: 3px;
+  background-color: $silver-600;
+
+  &:hover {
+    background-color: $dark-500;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
 }
 
 .offers__form,
