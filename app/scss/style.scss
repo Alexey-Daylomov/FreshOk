@@ -2795,6 +2795,11 @@ details {
 
   .card-product {
     max-width: 300px;
+    min-height: 410px;
+  }
+
+  .card-product__descr{
+    min-height: 140px;
   }
 
   .card-product__favorite {
