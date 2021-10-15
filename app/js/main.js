@@ -34,9 +34,41 @@ $(function () {
     ]
   });
 
-  $('.product-top__input').styler();
+  $('.product-item__slider').slick({
+    prevArrow: '<button type="button" class="slick-btn slick-btn--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-btn--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+
+  $('.product-slider__list').slick({
+    prevArrow: '<button type="button" class="slick-btn slick-btn--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-btn--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  });
+
+  $('.card-product__field').styler();
   $('.form-check__item').styler();
   $('.product-catalog__item--style').styler();
+  $('.product-tabs__checkbox').styler();
+  
+  $(".product-item__rate, .product-tabs__rate").rateYo({
+    fullStar: true,
+    readOnly: true,
+    spacing: "6px",
+    starWidth: "16px",
+    normalFill: "#C1C1C1",
+    ratedFill: "#FFB800",
+  });
+
+  $(".product-tabs__rating").rateYo({
+    fullStar: true,
+    spacing: "6px",
+    starWidth: "16px",
+    normalFill: "#C1C1C1",
+    ratedFill: "#FFB800",
+  });
 
   var $inputFrom = $(".price-form__from");
   var $inputTo = $(".price-form__to");
@@ -160,6 +192,16 @@ $(function () {
       $('.sidebar').removeClass('sidebar--active');
       $('.overlay').removeClass('overlay--active');
     });
+  }
+
+  if (document.querySelector('.product-tabs')) {
+    $('.product-tabs__link').on('click', function (e) {
+      e.preventDefault();
+      $('.product-tabs__link').removeClass('product-tabs__link--active');
+      $(this).addClass('product-tabs__link--active');
+      $('.product-tabs__item').removeClass('product-tabs__item--active');
+      $($(this).attr('href')).addClass('product-tabs__item--active');
+    })
   }
 
   if (document.querySelector('.product-top')) {
