@@ -15,7 +15,6 @@
 <body class="overlay">
   <header class="header">
     <nav class="header__navigation">
-      <h1 class="sr-only">Фрешок Онлайн-маркет</h1>
       <div class="header__top">
         <div class="header__inner container">
           <button class="header__burger" type="button">
@@ -74,50 +73,48 @@
                 </li>
               </ul>
             </div>
-            <nav class="menu-navigation menu-navigation--header">
-              <ul class="menu-navigation__list">
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Доставка
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    О нас
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Новости
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Контакты
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Акции
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Вакансии
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Отзывы
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Публичная оферта
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <ul class="menu-info">
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Доставка
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Новости
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Контакты
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Акции
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Вакансии
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Отзывы
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Публичная оферта
+                </a>
+              </li>
+            </ul>
           </nav>
           <a class="header__link header__link--delivery" href="#">
             <span class="hidden">Адрес и время доставки</span>
@@ -142,7 +139,7 @@
         <div class="header__inner container">
           <a class="logo header__logo" href="#">
             <picture>
-              <source class="logo__img" srcset="images/logo-mobile.svg 37w" media="(max-width: 768px)" sizes="(max-width: 768px) 37px">
+              <source srcset="images/logo-mobile.svg" media="(max-width: 768px)" sizes="(max-width: 768px) 37px">
               <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
             </picture>
           </a>
@@ -224,6 +221,7 @@
   </header>
   <main class="main">
     <section class="discounts-slider">
+      <h1 class="sr-only">Фрешок Онлайн-маркет</h1>
       <h2 class="sr-only">Топовые предложения</h2>
       <ul class="discounts-slider__inner">
         <li class="discounts-slider__item">
@@ -896,10 +894,8 @@
         <div class="footer__inner">
           <span class="footer__copy">© 2021 ФРЕШОК</span>
           <ul class="footer__payments">
-            <li class="footer__payment" style="background-image: url(images/icons/visa.svg);">
-            </li>
-            <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);">
-            </li>
+            <li class="footer__payment" style="background-image: url(images/icons/visa.svg);"></li>
+            <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);"></li>
           </ul>
         </div>
       </div>

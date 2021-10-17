@@ -15,7 +15,6 @@
 <body class="overlay">
   <header class="header">
     <nav class="header__navigation">
-      <h1 class="sr-only">Фрешок Онлайн-маркет</h1>
       <div class="header__top">
         <div class="header__inner container">
           <button class="header__burger" type="button">
@@ -73,50 +72,48 @@
                 </li>
               </ul>
             </div>
-            <nav class="menu-navigation--header">
-              <ul class="menu-navigation__list">
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Доставка
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    О нас
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Новости
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Контакты
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Акции
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Вакансии
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Отзывы
-                  </a>
-                </li>
-                <li class="menu-navigation__item">
-                  <a class="menu-navigation__link" href="#">
-                    Публичная оферта
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <ul class="menu-info">
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Доставка
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Новости
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Контакты
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Акции
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Вакансии
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Отзывы
+                </a>
+              </li>
+              <li class="menu-info__item">
+                <a class="menu-info__link" href="#">
+                  Публичная оферта
+                </a>
+              </li>
+            </ul>
           </nav>
           <a class="header__link header__link--delivery" href="#"><span class="hidden">Адрес и время доставки</span></a>
           <a class="header__link header__link--phone" href="#"><span class="hidden">Горячая линия 24/7</span></a>
@@ -137,7 +134,7 @@
         <div class="header__inner container">
           <a class="logo header__logo" href="#">
             <picture>
-              <source class="logo__img" srcset="images/logo-mobile.svg 37w" media="(max-width: 768px)" sizes="(max-width: 768px) 37px">
+              <source srcset="images/logo-mobile.svg" media="(max-width: 768px)" sizes="(max-width: 768px) 37px">
               <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
             </picture>
           </a>
@@ -218,40 +215,57 @@
     </nav>
   </header>
   <main class="main">
-    <section class="breadcrumbs">
-      <div class="container">
-        <h2 class="sr-only">Постраничная навигация</h2>
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Главная</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Каталог товаров</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Питахайя красная с белой мякотью</a>
-          </li>
-        </ul>
-      </div>
-    </section>
     <section class="product">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span>Питахайя красная с белой мякотью</span>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="product-item">
         <div class="container">
           <div class="product-item__inner">
-            <ul class="product-item__slider">
-              <li class="product-item__slide">
-                <img class="product-item__img" src="images/product/3.1.jpg" alt="Питахайя" width="420" height="420">
-              </li>
-              <li class="product-item__slide">
-                <img class="product-item__img" src="images/product/3.jpg" alt="Питахайя" width="420" height="420">
-              </li>
-              <li class="product-item__slide">
-                <img class="product-item__img" src="images/product/3.jpg" alt="Питахайя" width="420" height="420">
-              </li>
-            </ul>
+            <div class="product-item__modal">
+              <a class="product-item__link" href="#popup"></a>
+              <div class="product-item__popup">
+                <ul class="product-item__slider">
+                  <li class="product-item__slide">
+                    <img class="product-item__img" src="images/product/3.1.jpg" alt="Питахайя" width="420" height="420">
+                  </li>
+                  <li class="product-item__slide">
+                    <img class="product-item__img" src="images/product/3.jpg" alt="Питахайя" width="420" height="420">
+                  </li>
+                  <li class="product-item__slide">
+                    <img class="product-item__img" src="images/product/3.jpg" alt="Питахайя" width="420" height="420">
+                  </li>
+                </ul>
+              </div>
+              <div class="mfp-hide popup" id="popup">
+                <ul class="product-item__list">
+                  <li class="product-item__slide">
+                    <img class="product-item__img" src="images/product/3.1.jpg" alt="Питахайя" width="420" height="420">
+                  </li>
+                  <li class="product-item__slide">
+                    <img class="product-item__img" src="images/product/3.jpg" alt="Питахайя" width="420" height="420">
+                  </li>
+                  <li class="product-item__slide">
+                    <img class="product-item__img" src="images/product/3.jpg" alt="Питахайя" width="420" height="420">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h1 class="product-item__title">Питахайя красная с белой мякотью</h1>
             <div class="product-item__content">
               <article class="card-product card-product--elem card-product--hit card-product--sale">
-                <h2 class="card-product__title">Питахайя красная с белой мякотью</h2>
                 <div class="card-product__sale">-30%</div>
                 <div class="card-product__inner">
                   <span class="card-product__code">Код: 0111111</span>
@@ -268,7 +282,7 @@
                     </label>
                   </form>
                   <button class="btn btn--cart" type="submit">
-                    Добавить в корзину
+                    <span>Добавить в корзину</span>
                   </button>
                   <button class="card-product__favorite" type="button">
                     <svg>
@@ -438,7 +452,7 @@
               </article>
             </li>
             <li class="product-slider__item">
-              <article class="card-product card-product--three">
+              <article class="card-product">
                 <div class="card-product__sale">-50%</div>
                 <button class="card-product__favorite" type="button">
                   <svg>
@@ -463,7 +477,7 @@
               </article>
             </li>
             <li class="product-slider__item">
-              <article class="card-product card-product--three card-product--hit">
+              <article class="card-product card-product--hit">
                 <div class="card-product__sale">-50%</div>
                 <button class="card-product__favorite" type="button">
                   <svg>
@@ -488,7 +502,7 @@
               </article>
             </li>
             <li class="product-slider__item">
-              <article class="card-product card-product--three card-product--new">
+              <article class="card-product card-product--new">
                 <div class="card-product__sale">-50%</div>
                 <button class="card-product__favorite" type="button">
                   <svg>
@@ -513,7 +527,7 @@
               </article>
             </li>
             <li class="product-slider__item">
-              <article class="card-product card-product--three card-product--hit">
+              <article class="card-product card-product--hit">
                 <div class="card-product__sale">-50%</div>
                 <button class="card-product__favorite" type="button">
                   <svg>
@@ -538,7 +552,7 @@
               </article>
             </li>
             <li class="product-slider__item">
-              <article class="card-product card-product--three card-product--sale">
+              <article class="card-product card-product--sale">
                 <div class="card-product__sale">-30%</div>
                 <button class="card-product__favorite" type="button">
                   <svg>
@@ -663,10 +677,8 @@
         <div class="footer__inner">
           <span class="footer__copy">© 2021 ФРЕШОК</span>
           <ul class="footer__payments">
-            <li class="footer__payment" style="background-image: url(images/icons/visa.svg);">
-            </li>
-            <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);">
-            </li>
+            <li class="footer__payment" style="background-image: url(images/icons/visa.svg);"></li>
+            <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);"></li>
           </ul>
         </div>
       </div>
