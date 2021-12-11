@@ -134,7 +134,7 @@
         <div class="header__inner container">
           <a class="logo header__logo" href="#">
             <picture>
-              <source srcset="images/logo-mobile.svg 37w" media="(max-width: 768px)" sizes="(max-width: 768px) 37px">
+              <source srcset="images/logo-mobile.svg" media="(max-width: 768px)">
               <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
             </picture>
           </a>
@@ -183,7 +183,7 @@
             <label class="form__name" for="shop">
               <span class="sr-only">Окно поиска</span>
             </label>
-            <input class="form__field" type="text" name="search" id="shop" placeholder="Найти в магазине..." required>
+            <input class="form__field" type="search" name="search" id="shop" placeholder="Найти в магазине..." required>
             <button class="form__btn" type="submit">Поиск</button>
           </form>
           <ul class="header__control">
@@ -233,13 +233,13 @@
           <h1 class="title product-catalog__title">Каталог товаров</h1>
           <div class="product-catalog__inner">
             <div class="sidebar">
-              <form class="sidebar__inner">
+              <form class="sidebar__inner" data-simplebar>
                 <button class="menu-mobile__close sidebar__close" type="button">
                   <span class="sr-only">Закрыть меню фильтров</span>
                 </button>
                 <div class="sidebar__item categories-filter">
                   <h3 class="sidebar__btn categories-filter__btn">Категории</h3>
-                  <ul class="categories-filter__list">
+                  <ul class="categories-filter__list" data-simplebar>
                     <li class="categories-filter__item">
                       <a class="categories-filter__link" href="#">Овощи и фрукты</a>
                     </li>
@@ -813,14 +813,12 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="container">
-        <div class="footer__inner">
-          <span class="footer__copy">© 2021 ФРЕШОК</span>
-          <ul class="footer__payments">
-            <li class="footer__payment" style="background-image: url(images/icons/visa.svg);"></li>
-            <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);"></li>
-          </ul>
-        </div>
+      <div class="container footer__inner">
+        <span class="footer__copy">© 2021 ФРЕШОК</span>
+        <ul class="footer__payments">
+          <li class="footer__payment" style="background-image: url(images/icons/visa.svg);"></li>
+          <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);"></li>
+        </ul>
       </div>
     </div>
   </footer>

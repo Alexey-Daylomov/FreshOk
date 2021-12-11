@@ -162,8 +162,6 @@ $(function () {
     });
   }
 
-  // $('.sidebar').each(element, new SimpleBar());
-
   const button = document.querySelector('.header__btn--search');
   button.addEventListener('click', () => {
     $('.form').toggleClass('form--open');

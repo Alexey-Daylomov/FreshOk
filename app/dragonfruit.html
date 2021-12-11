@@ -134,7 +134,7 @@
         <div class="header__inner container">
           <a class="logo header__logo" href="#">
             <picture>
-              <source srcset="images/logo-mobile.svg 37w" media="(max-width: 768px)" sizes="(max-width: 768px) 37px">
+              <source srcset="images/logo-mobile.svg" media="(max-width: 768px)">
               <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
             </picture>
           </a>
@@ -183,7 +183,7 @@
             <label class="form__name" for="shop">
               <span class="sr-only">Окно поиска</span>
             </label>
-            <input class="form__field" type="text" name="search" id="shop" placeholder="Найти в магазине..." required>
+            <input class="form__field" type="search" name="search" id="shop" placeholder="Найти в магазине..." required>
             <button class="form__btn" type="submit">Поиск</button>
           </form>
           <ul class="header__control">
@@ -673,14 +673,12 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="container">
-        <div class="footer__inner">
-          <span class="footer__copy">© 2021 ФРЕШОК</span>
-          <ul class="footer__payments">
-            <li class="footer__payment" style="background-image: url(images/icons/visa.svg);"></li>
-            <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);"></li>
-          </ul>
-        </div>
+      <div class="container footer__inner">
+        <span class="footer__copy">© 2021 ФРЕШОК</span>
+        <ul class="footer__payments">
+          <li class="footer__payment" style="background-image: url(images/icons/visa.svg);"></li>
+          <li class="footer__payment" style="background-image: url(images/icons/mastercard.svg);"></li>
+        </ul>
       </div>
     </div>
   </footer>
